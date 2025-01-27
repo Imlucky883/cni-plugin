@@ -1,11 +1,14 @@
+
+
 # Kubernetes Cluster Installation using kubeadm on EC2 Instances
 
 This guide provides a step-by-step process to install a Kubernetes cluster using kubeadm on one EC2 master node and one worker node. The instructions also include setting up containerd as the container runtime.
 
----
+Blog : [How to create your own CNI ](https://hashnode.com/draft/6791eb67c38544768b02ebdb)
+
 
 ## Prerequisites
-1. Two EC2 instances running Ubuntu (one for the master node and one for the worker node).
+1. Two EC2 instances running Ubuntu (one for the master node and one for the worker node) of type `t2.medium`
 2. Ensure that both instances have the required network and security group configurations to communicate with each other.
 
 ---
