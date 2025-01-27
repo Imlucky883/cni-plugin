@@ -105,11 +105,6 @@ DEL)
     fi
     ;;
 
-GET)
-    echo "GET not supported"
-    exit 1
-    ;;
-
 VERSION)
     echo '{
       "cniVersion": "0.4.0",
