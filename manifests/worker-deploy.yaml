@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: busybox-deployment
+  labels:
+    app: busybox
+spec:
+  replicas: 2 # Number of pod replicas
+  selector:
+    matchLabels:
+      app: busybox
+  template:
+    metadata:
+      labels:
+        app: busybox
+    spec:
+      nodeName: ip-10-0-10-51
+      containers:
+      - name: busybox-container
+        image: busybox:latest # Using the BusyBox image
+        command: ["sleep", "3600"] # Keeps the container running
+        resources:
+          requests:
+            cpu: "50m"
+            memory: "16Mi"
+          limits:
+            cpu: "100m"
